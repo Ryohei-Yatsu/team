@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="サイトをキーワードで説明">
+    <meta name="description" content="どんなサイトかを短い文章で説明">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=1">
+    <title>人生相談！短歌部</title>
+    <script src="../js/common.js"></script>
 </head>
+
 <body>
-    <h1>あああ</h1>
-    <h2>いいい</h2>
+
+    <header>
+        <nav class="glovalNavi">
+            <ul class="globalNavi_list">
+                <li id="menu-item1" class="menu-item"><a href="">詠んでみる</a></li>
+                <li id="menu-item2" class="menu-item"><a href="">お悩み和歌を見る</a></li>
+                <li id="menu-item3" class="menu-item"><a href="">和歌詠みのルール</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+    
+    <footer>
+        <p class="copyright">Copyright &copy; DEMO all rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>

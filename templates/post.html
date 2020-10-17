@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <select name="genre" id="genre">
+        <option value="se">ジャンル選択</option>
+        <option value="fa">家族</option>
+        <option value="mo">お金</option>
+        <option value="fr">友達</option>
+        <option value="li">生活</option>
+        <option value="sc">学校</option>
+        <option value="lo">恋愛</option>
+        <option value="wo">仕事</option>
+        <option value="no">その他</option>
+    </select>
+    <form action="/add" method="post">
+      <textarea name="comment" cols="30" rows="5"></textarea><br>
+      <textarea name="supplement" id="supplement" cols="40" rows="5" placeholder="補足説明をご記入ください"></textarea><br>
+      <input type="submit" name="save" value="投稿">
+    </form>
+  
+{% endblock %}
