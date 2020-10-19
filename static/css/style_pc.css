@@ -1,24 +1,27 @@
 @charset "UTF-8";
 
 html {
-  overflow-y: scroll;
+  overflow:auto;
   font-family: "游明朝"
-	height:100%;	/* 縦の高さを100% */
-	width:100%;	/* 横の幅を100% */
 }
 
 body{
   position: relative;		/* フッター部の配置用に定義 */
-	min-height: 100%;		/* 縦の表示領域を100% */
+  min-height: 100%;	
   color: black;
-  /* position: fixed; */
+  position: fixed;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;	/* 余白の削除 */
-	padding: 0;	/* 余白の削除 */
-	height: 100%;	/* 縦の高さを100% */
-  width: 100%;	/* 横の幅を100% */
-  min-height: 100vh;
+  margin: 0;	
+	padding: 0;
+	height: 100%;
+  width: 100%;
+  min-height: 100vh; 
+}
+
+header{
+  position:fixed;
+  position: absolute;/*←絶対位置*/
 }
 
 
@@ -118,19 +121,20 @@ img {
 
 
 
-h1 {
+h1{
   margin-top: 110px;
   margin-bottom: 110px;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   float: right;
   font-size: 50px;
+  line-height:10px;
 }
 
-.setumei {
-  margin-right: 150px;
-  font-size: 50px;
-  line-height: 20px;
+.daimei{
+  font-size: 40px;
+  line-height: 10px;
+  margin-right:120px;
 }
 
 p1{
@@ -138,14 +142,14 @@ p1{
   writing-mode: vertical-rl;
   margin: 90px 130px;
   float: left;
+  font-size:80px;
 }
 
-footer{
+.copyright{
   color: #fff;
   background-color: #008000;
   text-align: center;
   position:fixed;
-  position: relative;
   position: absolute;/*←絶対位置*/
   bottom: 0; /*下に固定*/
   width:100%;
