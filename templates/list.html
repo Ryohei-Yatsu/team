@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+        <th>日付</th>
+        <th>投稿</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in comment_list: %}
+            <tr>
+                <th scope="row">{{item["comment"]}}</th>
+                <td>{{item["supplement"]}}</td>
+                <td><a href="＃">詠み返す</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
 
 {% endblock %}
