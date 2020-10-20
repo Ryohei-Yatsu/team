@@ -31,7 +31,7 @@ def post_post():
     # データベースの中身がみれるようにする
     c = conn.cursor()
     # SQL文を実行、(task)はタプル型なので「,」を入れる必要あり
-    c.execute("insert into family values(null,?,?)",(comment,discription))
+    c.execute("insert into tanka values(null,?,?)",(comment,discription))
     # 変更を加える
     conn.commit()
     # 取ってきたレコードを格納する
@@ -39,7 +39,7 @@ def post_post():
     # 接続終了
     c.close()
 
-    return redirect("/list")
+    return 入力完了
 
 
 @app.route('/list')
