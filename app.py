@@ -43,9 +43,9 @@ def post_post():
 
 
 @app.route('/list')
-def bbs():
+def comment_list():
     # クッキーからuser_idを取得
-    conn = sqlite3.connect('service.db')
+    conn = sqlite3.connect('tanka.db')
     c = conn.cursor()
     # # DBにアクセスしてログインしているユーザ名と投稿内容を取得する
     # クッキーから取得したuser_idを使用してuserテーブルのnameを取得
