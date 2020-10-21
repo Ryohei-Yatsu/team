@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div>
+<div class="post" margin style="margin:150px 400px;" >
     <select name="genre" id="genre">
         <option value="se">ジャンル選択</option>
         <option value="fa">家族</option>
@@ -15,9 +15,9 @@
         <option value="no">その他</option>
     </select>
     <form action="/post" method="post">
-      <textarea name="comment" cols="30" rows="5"></textarea><br>
-      <textarea name="supplement" id="supplement" cols="40" rows="5" placeholder="補足説明をご記入ください"></textarea><br>
+      <textarea name="comment" cols="70" rows="5" ></textarea><br>
+      <textarea name="supplement" id="supplement" cols="70" rows="20" placeholder="補足説明をご記入ください"></textarea><br>
       <input type="submit" name="save" value="投稿">
     </form>
-
+</div>
 {% endblock %}
