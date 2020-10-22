@@ -31,7 +31,7 @@ def post_post():
     # データベースの中身がみれるようにする
     c = conn.cursor()
     # SQL文を実行、(task)はタプル型なので「,」を入れる必要あり
-    c.execute("insert into family values(null,?,?)",(comment,discription))
+    c.execute("insert into family values(null,?,?,?)",(comment,discription))
     # 変更を加える
     conn.commit()
     # 取ってきたレコードを格納する
@@ -49,7 +49,7 @@ def bbs():
     c = conn.cursor()
     # # DBにアクセスしてログインしているユーザ名と投稿内容を取得する
     # クッキーから取得したuser_idを使用してuserテーブルのnameを取得
-    c.execute("select name from user where id = ?", (user_id,))
+    c.execute("select name from family where id = ?", (user_id,))
     # fetchoneはタプル型
     user_info = c.fetchone()
     c.execute("select id,comment from bbs where userid = ? order by id", (user_id,))
@@ -61,7 +61,6 @@ def bbs():
         return render_template('bbs.html' , user_info = user_info , comment_list = comment_list)
     else:
         return redirect("/login")
-
 
 
 
