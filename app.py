@@ -36,7 +36,11 @@ def post_post():
     # データベースの中身がみれるようにする
     c = conn.cursor()
     # SQL文を実行、(task)はタプル型なので「,」を入れる必要あり
+<<<<<<< HEAD
     c.execute("insert into tanka values(null,?,?,?,?)",(comment,discription,genre_id,time))
+=======
+    c.execute("insert into family values(null,?,?,?)",(comment,discription))
+>>>>>>> cecd8986f01e2f9163cad80b01461ccc3f058e31
     # 変更を加える
     conn.commit()
     # 取ってきたレコードを格納する
@@ -56,7 +60,11 @@ def comment_list():
     c = conn.cursor()
     # # DBにアクセスしてログインしているユーザ名と投稿内容を取得する
     # クッキーから取得したuser_idを使用してuserテーブルのnameを取得
+<<<<<<< HEAD
     c.execute("select * from tanka left outer join genre on tanka.genre_id= genre.id;  where id = ?" ,(genre_id,) )
+=======
+    c.execute("select name from family where id = ?", (user_id,))
+>>>>>>> cecd8986f01e2f9163cad80b01461ccc3f058e31
     # fetchoneはタプル型
     genre_id = []
     for row in c.fetchall():
@@ -66,7 +74,6 @@ def comment_list():
         return render_template('list.html' , user_info = user_info , comment_list = comment_list)
     else:
         return redirect("/list")
-
 
 
 

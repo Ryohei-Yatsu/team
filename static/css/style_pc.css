@@ -27,7 +27,6 @@ header{
 
 img {
   height: 500px;
-  width:300px;
 }
 
 #menu {
@@ -128,8 +127,8 @@ h1{
 
 .daimei{
   margin-top:110px;
-  margin-bottom:110px;
   line-height:20px;
+  margin-right:110px;
 }
 
 
