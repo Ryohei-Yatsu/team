@@ -2,24 +2,25 @@
 
 {% block content %}
 
-<div class="post" margin style="margin:150px 500px;" >
+<div class="post" margin style="margin:150px 500px;">
+  <form action="/post" method="post">
+    <div>
     <select name="genre_id" id="genre">
-      <option hidden  value="ja">ジャンル選択</option>
-      <option value="hu">性格・生き方</option>
-      <option value="wo">仕事</option>
-      <option value="mo">お金</option>
-      <option value="lo">恋愛</option>
-      <option value="he">健康</option>
-      <option value="sc">学校</option>
-      <option value="fa">家族</option>
-      <option value="li">夫婦</option>
-      <option value="fr">友達</option>
-      <option value="no">その他</option>
-    </select>
-    <form action="/post" method="post">
-      <textarea name="comment" cols="70" rows="5" placeholder="和歌を詠んでね" ></textarea><br>
-      <textarea name="discription" id="discription" cols="70" rows="20" placeholder="補足説明をご記入ください"></textarea><br>
-      <input type="submit" name="save" value="和歌を投稿する" padding="30px" text-align="center">
-    </form>
+      <option hidden value="ja">ジャンル選択</option>
+      <option value="1">性格・生き方</option>
+      <option value="2">仕事</option>
+      <option value="3">お金</option>
+      <option value="4">恋愛</option>
+      <option value="5">健康</option>
+      <option value="6">学校</option>
+      <option value="7">家族</option>
+      <option value="8">夫婦</option>
+      <option value="9">友達</option>
+      <option value="10">その他</option>
+    </select></div>
+    <textarea name="comment" cols="70" rows="5" placeholder="和歌を詠んでね"></textarea><br>
+    <textarea name="discription" id="discription" cols="70" rows="20" placeholder="補足説明をご記入ください"></textarea><br>
+    <input type="submit" name="save" value="和歌を投稿する" padding="30px" text-align="center">
+  </form>
 </div>
 {% endblock %}
